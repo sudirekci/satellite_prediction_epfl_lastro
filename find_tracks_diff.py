@@ -335,6 +335,3 @@ if __name__ == '__main__':
 
     main(diff_image=args.diff_image, ref_image=args.ref_image, meta_path=fix_path(args.path), no_plots=args.no_plots)
 
-"""
-python3 find_tracks_diff.py --diff_image /home/su/Desktop/lastro/OMEGACAM_2020-01-29_SDSSJ0924+0219_mosaic_J092656+021826_hsize_864_diffimg.fits --ref_image /home/su/Desktop/lastro/J092656+021826_hsize_864_ref.fits --path /home/su/Desktop/lastro/predict_sat_test/
-"""
