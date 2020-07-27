@@ -7,4 +7,12 @@ find_tracks_diff.py takes a difference image and a reference image as input and 
 
 find_tracks_single_ep.py takes a field name and an observation date as input. It first constructs full-field images of the field taken on the observation date. Then, the cosmic rays are removed from the images with lacosmicx and the objects are found with sextractor. Finally, all the fast and slow satellite tracks are found, plotted and saved.
 
+Example commands to run the scripts:
+
+python3 find_tracks_single_ep.py --field_name SDSSJ0924+0219 --path /home/su/Desktop/lastro/ --obs_date 2020-01-29
+
+python3 label_cutouts.py --diff_image /home/su/Desktop/lastro/OMEGACAM_2020-01-28_SDSSJ0924+0219_mosaic_J092631+024907_hsize_865_diffimg.fits --ref_image /home/su/Desktop/lastro/J092631+024907_hsize_865_ref.fits --path /home/su/Desktop/lastro/
+
+python3 find_tracks_diff.py --diff_image /home/su/Desktop/lastro/OMEGACAM_2020-01-28_SDSSJ0924+0219_mosaic_J092631+024907_hsize_865_diffimg.fits --ref_image /home/su/Desktop/lastro/J092631+024907_hsize_865_ref.fits --path /home/su/Desktop/lastro/
+
 # satellite_prediction_epfl_lastro
