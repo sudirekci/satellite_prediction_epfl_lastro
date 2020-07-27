@@ -361,8 +361,8 @@ def find_detections(path, filenames, im_size_x, im_size_y):
     all_ellipse_params = [np.concatenate(all_ellipse_params[ep]) for ep in range(0, no_epochs)]
 
     os.remove(path + 'cutout_pp.fits')
-    # for k in range(0, no_epochs):
-    #     os.remove(path+filenames[k])
+    for k in range(0, no_epochs):
+        os.remove(path+filenames[k])
 
 
 def find_reference_stars(path, img):
@@ -579,7 +579,7 @@ if __name__ == '__main__':
     parser.add_argument('--path', metavar='path', required=True,
                         help='path for creating & deleting necessary files')
     parser.add_argument('--obs_date', metavar='path', required=True,
-                        help='observation date')
+                        help='observation date in the format yyyy-mm-dd')
     parser.add_argument('--no_plots', required=False, default=False, action='store_true',
                         help='Add if no plots should be drawn')
     args = parser.parse_args()
